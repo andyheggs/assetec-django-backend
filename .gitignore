@@ -1,0 +1,4 @@
+project/settings.py
+
+# Virtual environments
+.env/
