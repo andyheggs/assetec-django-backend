@@ -1,5 +1,4 @@
 from equities.models import Stock
-from stock_review.models import Stock_review
 from rest_framework.exceptions import NotFound, PermissionDenied
 from rest_framework.response import Response
 
@@ -14,7 +13,7 @@ def handle_exceptions(handler_func):
             return handler_func(*args, **kwargs)  
         
         # Handle specific exceptions: Stock.DoesNotExist and NotFound
-        except (Stock.DoesNotExist, Stock_review.DoesNotExist, NotFound) as e:
+        except (Stock.DoesNotExist, NotFound) as e:
             
             # Print the type of exception
             print(type(e))  

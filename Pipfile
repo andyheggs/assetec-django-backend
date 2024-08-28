@@ -10,6 +10,8 @@ pylint = "*"
 django-environ = "*"
 djangorestframework = "*"
 djangorestframework-simplejwt = "*"
+tree = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
