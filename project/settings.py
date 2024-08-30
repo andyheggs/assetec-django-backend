@@ -68,7 +68,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True  # For development only
+#CORS_ALLOW_ALL_ORIGINS = True  # For development only
+
+CORS_ALLOWED_ORIGINS=[
+    'https://assetec-15d8b96cc456.herokuapp.com'
+]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
