@@ -75,7 +75,7 @@ CORS_ALLOWED_ORIGINS=[
     'https://assetec-15d8b96cc456.herokuapp.com'
 ]
 
-CSRF_TRUSTED_ORIGINS = ['your_heroku_url_here', 'http://127.0.0.1:8000']
+CSRF_TRUSTED_ORIGINS = ['https://assetec-15d8b96cc456.herokuapp.com', 'http://127.0.0.1:8000']
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
