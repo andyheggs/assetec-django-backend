@@ -18,7 +18,7 @@ class StockListCreateView(APIView):
     @handle_exceptions
     def get(self, request):
         # Model.find() equivalent
-        stocks = Stock.objects.all() 
+        stocks = Stock.objects.filter(owner=request.user)
         # For multiple results use many=True
         serialized_stocks = StockSerializer(stocks, many=True)
         # Return serialised data in response
@@ -60,6 +60,7 @@ class StockRetrieveUpdateDestroyView(APIView):
         serialized_stock = PopulatedStockSerializer(stock)
         # Return serialised data in response
         return Response(serialized_stock.data)
+    
 
 #--------------------------------------------------------UPDATE ROUTE-------------------------------------------------------#
 
