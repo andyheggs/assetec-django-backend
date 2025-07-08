@@ -72,14 +72,16 @@ MIDDLEWARE = [
 #CORS_ALLOW_ALL_ORIGINS = True  # For development only
 
 CORS_ALLOWED_ORIGINS=[
-    'https://assetec-15d8b96cc456.herokuapp.com', 
-    'https://assetec.netlify.app/'
+    'https://assetec.io',
+    'https://assetec.netlify.app',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_HEADERS = True
 
-CSRF_TRUSTED_ORIGINS = ['https://assetec-15d8b96cc456.herokuapp.com', 'http://127.0.0.1:8000']
+CSRF_TRUSTED_ORIGINS = ['https://assetec.io', 'https://assetec-15d8b96cc456.herokuapp.com', 'http://127.0.0.1:8000']
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
